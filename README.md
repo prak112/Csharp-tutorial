@@ -8,4 +8,4 @@ Source : freeCodeCamp, [produced by Giraffe Academy](https://www.youtube.com/wat
 - Part 2 :
 	- Data Structures and Loops 
 - Part 3 :
-	- Classes, Objects and Exceptions (above parts included inherently)
+	- Classes, Objects and Exceptions (parts 1 & 2 included)
