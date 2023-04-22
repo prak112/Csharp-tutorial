@@ -1,7 +1,9 @@
 ﻿using System.Drawing;
 using System.Xml.Linq;
 
-public class freeCodeCamp
+namespace FreeCodeCamp;
+
+public class FreeCodeCamp
 {
     public static void Main(string[] args)
     {
@@ -25,12 +27,14 @@ public class freeCodeCamp
                 string internalDistance = new string(' ', row);
 
                 if (row == height - 1)
-                {         // base of the triangle
+                {   
+                    // base of the triangle
                     string triangleBase = new string('_', height - 1);
                     Console.WriteLine($"{tabSpace}/{triangleBase}|");
                 }
                 else
-                {                           // continuous triangle structure 
+                {   
+                    // continuous triangle structure 
                     Console.WriteLine($"{tabSpace}/{internalDistance}|");
                 }
             }
@@ -232,7 +236,7 @@ BUT, I would love to meet {celebName}
         }
         
         catch(Exception ex) { 
-            Console.WriteLine("ERROR : "+ex.Message); 
+            Console.WriteLine("ERROR : " + ex.Message); 
         }
 
     }
