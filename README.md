@@ -9,3 +9,5 @@ Source : freeCodeCamp, [produced by Giraffe Academy](https://www.youtube.com/wat
 	- Data Structures and Loops 
 - Part 3 :
 	- Classes, Objects and Exceptions (parts 1 & 2 included)
+- Part 4 :
+	- Class Elements (Constructor, Methods, Getter & Setters, Attributes) and Inheritance
