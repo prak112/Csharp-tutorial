@@ -33,10 +33,19 @@ Summary: (BUILD & TEST Phase)
                 Console.WriteLine($"Guitar {i + 1} Rating : {guitars[i].Rating}");
 
             }
-            
+            // Call Guitar class static variable guitarCount
+            Console.WriteLine($"\nTotal Guitars in Warehouse : {Guitar.guitarCount}");
+            Console.WriteLine($"Static variable call from Object : {guitar1.getGuitarCount()}");
+
+            // Call GuitarTips static class and Learning static method
+            GuitarTips.Learning();
+
+
+
+            Console.WriteLine("\n---End Program---\n");
+
 
             // TO-DO :
-            // Static Class Attributes
             // Static Methods & Classes
             // Inheritance
 

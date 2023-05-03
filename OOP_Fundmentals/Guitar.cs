@@ -9,6 +9,7 @@ public class Guitar
     public int stringCount { get; set; }
     public bool hasAmplifier { get; set; }
     private string rating;  // secure and internal class access-only variable
+    public static int guitarCount = 0;
 
     // Constructor
     public Guitar(string aGuitarType, string aManufacturer, string aStringType, int aStringCount, bool aHasAmplifier, string aRating)
@@ -18,18 +19,19 @@ public class Guitar
         stringType = aStringType;
         stringCount = aStringCount;
         hasAmplifier = aHasAmplifier;
-        Rating = aRating;
+        Rating = aRating;       // argument assigned to Getter & Setter Method
+        guitarCount++;          // increment guitarCount for every object created
     }
 
     // Methods
-     public bool IsElectric()
+    public bool IsElectric()
     {
         if (guitarType == "Electric") { return true; }
         return false;
     }
 
     // Getter & Setter Method
-    public string Rating  // to be assigned to private variable from Constructor
+    public string Rating  // set & return value to private variable in Properties
     {
         // required for value setup and retrieve
         get { return rating; }
@@ -52,5 +54,28 @@ public class Guitar
             }
         }
     }
+
+    // Static variable access
+    public int getGuitarCount()
+    {
+        return guitarCount;
+    }
+}
+
+
+static class GuitarTips 
+{ 
+    // Static Method
+    public static void Learning()
+    {
+        Console.WriteLine(@"
+Here is a list of Guitar Learning Options :
+- Chordify, practice any song on Youtube 
+- Gituru, AI-powered novice-level practice
+- Yousician, fully packed learning experience for all levels
+- Find a Local Teacher at your nearest Community College ;-)
+");
+    }
+
 
 }
