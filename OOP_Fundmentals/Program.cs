@@ -1,4 +1,6 @@
-﻿namespace OOPconcepts
+﻿using OOP_Fundmentals;
+
+namespace OOPconcepts
 {
     class MainProgram
     {
@@ -12,9 +14,9 @@ Summary: (BUILD & TEST Phase)
 - Access CSV whenever needed (To-Do)
 ");
             // Test Build - Object Methods
-            Guitar guitar1 = new Guitar("Classic", "Fender", "Nylon", 6, false, "1");
-            Guitar guitar2 = new Guitar("Electric", "Gibson", "Metal", 7, true, "2");
-            Guitar guitar3 = new Guitar("Acoustic", "Yamaha", "Metal", 6, true, "4");
+            Guitar guitar1 = new ("Fender", "3");
+            Guitar guitar2 = new ("Gibson", "3");
+            Guitar guitar3 = new ("Yamaha", "2.7");
 
             // store Guitar objects in array
             Guitar[] guitars = { guitar1, guitar2, guitar3 };
@@ -26,13 +28,10 @@ Summary: (BUILD & TEST Phase)
 
             for(int i = 0; i < guitars.Length; i++)
             {
-                // Check method - Guitar.IsElectric()
-                Console.WriteLine($"Guitar {i+1} is Electric : {guitars[i].IsElectric()}");
-
                 // Test Build - Getters & Setters (Guitars Rating - int)
                 Console.WriteLine($"Guitar {i + 1} Rating : {guitars[i].Rating}");
-
             }
+
             // Call Guitar class static variable guitarCount
             Console.WriteLine($"\nTotal Guitars in Warehouse : {Guitar.guitarCount}");
             Console.WriteLine($"Static variable call from Object : {guitar1.getGuitarCount()}");
@@ -40,37 +39,11 @@ Summary: (BUILD & TEST Phase)
             // Call GuitarTips static class and Learning static method
             GuitarTips.Learning();
 
-
+            // Create object from Inherited class
+            GuitarSpec guitar1Update = new GuitarSpec(GuitarSpec.GuitarTypes.Acoustic, GuitarSpec.StringTypes.Steel, "Fender", "4");
+            Console.WriteLine($"Updated details of Guitar 1 :\nGuitar Type: {guitar1Update.getGuitarType()}\nString Type : {guitar1Update.getStringType()}");
 
             Console.WriteLine("\n---End Program---\n");
-
-
-            // TO-DO :
-            // Static Methods & Classes
-            // Inheritance
-
-
-            /*
-            // initialize variables
-            bool userExit = false;
-
-            // application loop, until userExit = true        
-            try
-            {
-                while (!userExit)
-                {
-                    // PROGRAM_CODE BELOW
-
-
-
-                    // option for user to exit
-                    Console.WriteLine("\nPress 'q' to exit or Enter to continue");
-                    if (Console.ReadLine() == "q") { userExit = true; }
-                }
-                Console.WriteLine("\n---End <program_name>---\n");
-            }
-            catch (Exception ex) { Console.WriteLine($"ERROR : {ex.Message}\n---Terminate Program---\n"); }
-            */
         }
     }
 }

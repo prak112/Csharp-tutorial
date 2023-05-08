@@ -1,39 +1,25 @@
 using System;
 
-public class Guitar
+class Guitar
 {
     // Properties
-    public string guitarType { get; set; }
     public string manufacturer { get; set; }
-    public string stringType { get; set; }
-    public int stringCount { get; set; }
-    public bool hasAmplifier { get; set; }
-    private string rating;  // secure and internal class access-only variable
+    private string rating = String.Empty;  // secure and internal class access-only variable
     public static int guitarCount = 0;
 
     // Constructor
-    public Guitar(string aGuitarType, string aManufacturer, string aStringType, int aStringCount, bool aHasAmplifier, string aRating)
+    public Guitar(string aManufacturer, string aRating)
     {
-        guitarType = aGuitarType;
         manufacturer = aManufacturer;
-        stringType = aStringType;
-        stringCount = aStringCount;
-        hasAmplifier = aHasAmplifier;
         Rating = aRating;       // argument assigned to Getter & Setter Method
         guitarCount++;          // increment guitarCount for every object created
     }
 
     // Methods
-    public bool IsElectric()
-    {
-        if (guitarType == "Electric") { return true; }
-        return false;
-    }
-
     // Getter & Setter Method
     public string Rating  // set & return value to private variable in Properties
     {
-        // required for value setup and retrieve
+        // required for rating setup and retrieve
         get { return rating; }
         set
         {
@@ -63,6 +49,7 @@ public class Guitar
 }
 
 
+// Static class
 static class GuitarTips 
 { 
     // Static Method
@@ -76,6 +63,4 @@ Here is a list of Guitar Learning Options :
 - Find a Local Teacher at your nearest Community College ;-)
 ");
     }
-
-
 }
