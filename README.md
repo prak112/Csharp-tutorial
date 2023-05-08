@@ -23,8 +23,7 @@ Source : freeCodeCamp, [produced by Giraffe Academy](https://www.youtube.com/wat
 	- *INHERITANCE*
 	- *POLYMORPHISM*
 - Check out this [Microsoft Learn tutorial](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop) for clear definitons
-</br>
-- Inheritance is used to build a derivation of a Base Class
+
 - Inheritance is essential only if : 
 	- You are planning to build additional functionality to the Base Class
 	- You are NOT redundantly using Base Class functionalities
